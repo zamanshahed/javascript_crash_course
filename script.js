@@ -10,6 +10,9 @@ year--;
 console.log(age);
 console.log(year);
 
+/***********************************************************/
+
+
 //Data types: String, number, boolean, null, undefined, symbols(less used)
 const name = 'John';
 const age2 = 40;
@@ -43,3 +46,18 @@ console.log(fName.toUpperCase());
 console.log(fName.split(""));
 const cars = "BMW, Benz, Ferrari, Bughatti, Lambourgini";
 console.log(cars.split(', '));
+
+
+/***********************************************************/
+
+
+//Arrays
+const rolls = new Array(1, 2, 3, 4, 5, 6);
+console.log(rolls);
+const games = ['GTA5', 'ASC', 'FC', 'COD', 'NFS', 'CS', 'DOTA', 22, 563, 67857, true, false, null, undefined];
+games.push('PUBG');         //to add at the last
+games.unshift('RDR2');      //to add at the begining
+games.pop();                //delete the last item
+console.warn("Array Validity: "+Array.isArray(games));
+console.log(games);
+console.log(games[1]);
