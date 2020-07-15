@@ -237,6 +237,12 @@ const newAddNum = (num1, num2) => {
 
 console.log(newAddNum(2.11,7.54));
 
+
+/*****************************************************/
+
+
+//objects
+console.warn("objects....");
 //funcitons to create objects AKA: constructor function
 function Persion(firstName, lastName, Dob){
     this.firstName = firstName;
@@ -257,3 +263,27 @@ const person2 = new Persion('Sheldon', 'Cooper', '1-2-1981');
 console.log(person1);
 console.log(person2.getFullName());
 console.log(person2.getBirthYear())
+
+
+
+/*****************************************************/
+
+
+//class
+console.warn("CLass...........");
+
+class Student{
+    constructor (firstName, lastName, id){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.id = id;
+    }
+    
+    getStudentFullName(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+const Student1 = new Student('Howerd', 'Walowodtz', '5500132');
+
+console.log(Student1.getStudentFullName());
