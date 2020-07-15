@@ -124,7 +124,7 @@ console.log(toDoJSON);
 
 //Loops
 
-console.warn("Loops.........");
+console.warn("Loops and Arrays.........");
 
 for(let i=0; i<5; i++){
     console.log(`For Loop ${i}`);
@@ -181,3 +181,39 @@ const ToDosCompletedArray = ToDos.filter(function(item){
 
 console.log(ToDosCompletedArray);
 
+
+/***********************************************************/
+
+//Conditionals
+console.warn('Conditionals..........');
+
+// '==' only value matching
+let x="10";
+if(x==10){
+    console.log(`Value Matched!!`);
+}
+
+// '===' both value and type matching
+let y="10";
+if(y===10){
+    console.log(`Value Matched!!`);
+}else{
+    console.log(`Failed to match Type!!`);
+}
+
+//Ternary operator
+const a = 100;
+
+const color = a>10 ? 'green' : 'Red';
+
+//switch operator
+switch(color){
+    case 'Red':
+        console.log(`Color is Red.`);
+        break;
+    case 'Green':
+        console.log(`Color is Green.`);
+        break;
+    default:
+        console.log(`No colors found, Error detected!!`);
+}
