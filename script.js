@@ -93,7 +93,7 @@ const ToDos=[
     {
         id: 1,
         Task:"Do the homework",
-        isDone: false
+        isDone: true
     },
     {
         id: 2,
@@ -103,9 +103,81 @@ const ToDos=[
     {
         id: 3,
         Task:"Watch Tv series",
-        isDone: false
+        isDone: true
     }
 ];
 
 console.log(ToDos);
 console.log(ToDos[2].Task, ToDos[2].isDone);
+
+
+/***********************************************************/
+
+//JSON
+console.warn("JSON........");
+
+const toDoJSON = JSON.stringify(ToDos);     //convering into JSON array
+console.log(toDoJSON);
+
+
+/***********************************************************/
+
+//Loops
+
+console.warn("Loops.........");
+
+for(let i=0; i<5; i++){
+    console.log(`For Loop ${i}`);
+}
+
+let i=5;
+while(i<10){
+    console.log(`While Loop ${i}`);
+    i++;
+}
+
+//using loops for Arrays
+for(let i=0; i<ToDos.length; i++){
+    console.log(ToDos[i].Task);
+}
+
+//Looping in SMART JS WAY
+for(let items of ToDos){    
+    console.log(`Task Validity: ${items.isDone}`);
+}
+
+
+//Higher Way Methods
+//forEach, map, filter
+
+ToDos.forEach(function(items){
+    console.log(`Task name: ${items.Task}`);
+});
+
+ToDos.map(function(item){
+ console.log(`Task ID: ${item.id}`);
+});
+
+// converting the tasks into a text array
+const ToDosTextArray = ToDos.map(function(item){
+ return item.Task;
+});
+console.log(ToDosTextArray);
+
+
+const ToDosAnotherArray = ToDos.filter(function(item){
+    return item.isDone ===true;
+});
+
+console.log(ToDosAnotherArray);
+
+
+//more powerful one
+const ToDosCompletedArray = ToDos.filter(function(item){
+    return item.isDone ===true;
+}).map(function(items){
+    return items.Task
+});
+
+console.log(ToDosCompletedArray);
+
