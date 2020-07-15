@@ -236,3 +236,24 @@ const newAddNum = (num1, num2) => {
 }
 
 console.log(newAddNum(2.11,7.54));
+
+//funcitons to create objects AKA: constructor function
+function Persion(firstName, lastName, Dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.Dob = new Date(Dob);
+    this.getFullName = function(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+Persion.prototype.getBirthYear = function(){
+    return this.Dob.getFullYear();
+}
+//instantiate the object
+const person1 = new Persion('John', 'Doe', '3-2-2001');
+const person2 = new Persion('Sheldon', 'Cooper', '1-2-1981');
+
+console.log(person1);
+console.log(person2.getFullName());
+console.log(person2.getBirthYear())
