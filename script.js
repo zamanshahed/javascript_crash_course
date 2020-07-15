@@ -217,3 +217,22 @@ switch(color){
     default:
         console.log(`No colors found, Error detected!!`);
 }
+
+
+/*****************************************************/
+
+//functions
+
+console.warn('functions.........');
+function AddNum(num1=1, num2=2){        //default values 1, 2 in case no value was passed!
+    return (num1+num2);
+}
+
+console.log(AddNum(2,25));
+
+//smarter ways
+const newAddNum = (num1, num2) => {
+    return num1+num2;
+}
+
+console.log(newAddNum(2.11,7.54));
